@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://bl8pi8ew7l044"]
+
+[ext_resource type="Script" uid="uid://dqs125vne5s8x" path="res://Kevinj-k-project-2-game/scenes/overworld.gd" id="1_1876a"]
+[ext_resource type="Script" uid="uid://bp7uf2l08177b" path="res://Kevinj-k-project-2-game/scripts/worldPlayer.gd" id="3_8spc8"]
+[ext_resource type="Texture2D" uid="uid://cjelm3881qf0d" path="res://Kevinj-k-project-2-game/elements/adventurer-1.3-Sheet.png" id="3_1876a"]
+[ext_resource type="Texture2D" uid="uid://clskwixt7oext" path="res://Kevinj-k-project-2-game/elements/overworld.png" id="3_xyyq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xyyq0"]
+size = Vector2(104.828, 181.449)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8spc8"]
+radius = 25.0
+height = 84.0
+
+[node name="Overworld" type="Node2D"]
+script = ExtResource("1_1876a")
+
+[node name="Overworld" type="Sprite2D" parent="."]
+position = Vector2(3842, 1214)
+scale = Vector2(18.0105, 18.0105)
+texture = ExtResource("3_xyyq0")
+
+[node name="castle" type="Area2D" parent="Overworld"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Overworld/castle"]
+position = Vector2(199.994, 1.22153)
+shape = SubResource("RectangleShape2D_xyyq0")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(638, 300)
+script = ExtResource("3_8spc8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-46, 87)
+scale = Vector2(2.47297, 2.47297)
+texture = ExtResource("3_1876a")
+hframes = 8
+vframes = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-46, 100)
+shape = SubResource("CapsuleShape2D_8spc8")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(0.5, 0.5)
+
+[connection signal="body_entered" from="Overworld/castle" to="." method="_on_castle_body_entered"]

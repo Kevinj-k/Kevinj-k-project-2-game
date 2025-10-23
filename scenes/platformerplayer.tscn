@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgyje1ox72xs5"]
+
+[ext_resource type="Script" uid="uid://83b573rnqtcv" path="res://Kevinj-k-project-2-game/scenes/dungeonPlayer.gd" id="1_2wwun"]
+[ext_resource type="Texture2D" uid="uid://cjelm3881qf0d" path="res://Kevinj-k-project-2-game/elements/adventurer-1.3-Sheet.png" id="1_gif8r"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2wwun"]
+
+[node name="Platformerplayer" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_2wwun")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_2wwun")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -3)
+texture = ExtResource("1_gif8r")
+hframes = 8
+vframes = 12
