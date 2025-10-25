@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dprnpsavqrvhy"
+path="res://.godot/imported/untitled.dialogue-8f137f0558e76817868eafa483340099.tres"
+
+[deps]
+
+source_file="res://Kevinj-k-project-2-game/elements//untitled.dialogue"
+dest_files=["res://.godot/imported/untitled.dialogue-8f137f0558e76817868eafa483340099.tres"]
+
+[params]
+
+defaults=true

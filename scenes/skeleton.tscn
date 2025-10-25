@@ -11,8 +11,10 @@
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = ExtResource("1_7tf4s")
 animation = &"walk"
-frame_progress = 0.197482
+frame_progress = 0.958751
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(-3, 3)
 shape = SubResource("CapsuleShape2D_2yvo0")
+
+[node name="Node2D" type="Node2D" parent="CharacterBody2D"]

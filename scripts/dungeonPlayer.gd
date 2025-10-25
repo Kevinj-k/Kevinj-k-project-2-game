@@ -24,5 +24,10 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
+	if velocity.x > 0:
+		$animatedsprite.flip_h = false
+	elif velocity.x < 0:
+		$animatedsprite.flip_h = true
+	
 	$animator.speed = self.velocity.length()
 	$animator.on_ground = is_on_floor()

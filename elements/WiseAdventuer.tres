@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://d1b2nv63o4af8"]
+
+[ext_resource type="Texture2D" uid="uid://cjelm3881qf0d" path="res://Kevinj-k-project-2-game/elements/adventurer-1.3-Sheet.png" id="1_q0o1c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvils"]
+atlas = ExtResource("1_q0o1c")
+region = Rect2(0, 0, 50, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uucnu"]
+atlas = ExtResource("1_q0o1c")
+region = Rect2(50, 0, 50, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k28x"]
+atlas = ExtResource("1_q0o1c")
+region = Rect2(100, 0, 50, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52hwu"]
+atlas = ExtResource("1_q0o1c")
+region = Rect2(150, 0, 50, 40)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvils")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uucnu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1k28x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52hwu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

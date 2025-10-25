@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cs68pev0hk75j"]
 
-[ext_resource type="Script" uid="uid://bs2lxk621ivis" path="res://Kevinj-k-project-2-game/scenes/dungeon_1_1.gd" id="1_evxgo"]
+[ext_resource type="Script" uid="uid://bs2lxk621ivis" path="res://Kevinj-k-project-2-game/scripts/dungeon_1_1.gd" id="1_evxgo"]
 [ext_resource type="TileSet" uid="uid://c2wh265ebh2kq" path="res://Kevinj-k-project-2-game/elements/new_tile_set.tres" id="1_wb88m"]
 [ext_resource type="PackedScene" uid="uid://dgyje1ox72xs5" path="res://Kevinj-k-project-2-game/scenes/platformerplayer.tscn" id="2_ca4lo"]
 [ext_resource type="PackedScene" uid="uid://c281ph0u23f8c" path="res://Kevinj-k-project-2-game/scenes/money.tscn" id="4_1i51w"]
