@@ -23,3 +23,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+	$animator.speed = self.velocity.length()
+	$animator.on_ground = is_on_floor()

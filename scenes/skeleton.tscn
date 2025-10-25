@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0ebhgjiflrr3"]
+
+[ext_resource type="SpriteFrames" uid="uid://skyssc2i5v8b" path="res://Kevinj-k-project-2-game/elements/skeleton.tres" id="1_7tf4s"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2yvo0"]
+
+[node name="Skeleton" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = ExtResource("1_7tf4s")
+animation = &"walk"
+frame_progress = 0.197482
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-3, 3)
+shape = SubResource("CapsuleShape2D_2yvo0")
