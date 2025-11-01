@@ -66,8 +66,11 @@ sprite_frames = ExtResource("6_2m06d")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WiseAdventure"]
+[node name="Area2D" type="Area2D" parent="WiseAdventure"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WiseAdventure/Area2D"]
 position = Vector2(-63.25, 61.5)
 shape = SubResource("RectangleShape2D_xnw8d")
 
 [connection signal="body_entered" from="Overworld/castle" to="." method="_on_castle_body_entered"]
+[connection signal="body_entered" from="WiseAdventure/Area2D" to="WiseAdventure" method="_on_area_2d_body_entered"]

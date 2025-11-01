@@ -15,4 +15,5 @@ func _process(delta: float) -> void:
 	
 	if not on_ground:
 		animated_sprite.play("jump")
+		
 	pass

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dfhmb1yj06jke"
+path="res://.godot/imported/sign1-2.dialogue-3ad6d12ff490ed9505ce2884feaedd60.tres"
+
+[deps]
+
+source_file="res://Kevinj-k-project-2-game/dialouge/sign1-2.dialogue"
+dest_files=["res://.godot/imported/sign1-2.dialogue-3ad6d12ff490ed9505ce2884feaedd60.tres"]
+
+[params]
+
+defaults=true

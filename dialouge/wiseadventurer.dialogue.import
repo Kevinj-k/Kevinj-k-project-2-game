@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bh5a3kqhxx11w"
+path="res://.godot/imported/wiseadventurer.dialogue-35dc8dd5ed273e10838dbe370df32753.tres"
+
+[deps]
+
+source_file="res://Kevinj-k-project-2-game/dialouge/wiseadventurer.dialogue"
+dest_files=["res://.godot/imported/wiseadventurer.dialogue-35dc8dd5ed273e10838dbe370df32753.tres"]
+
+[params]
+
+defaults=true

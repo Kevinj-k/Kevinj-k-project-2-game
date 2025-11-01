@@ -12,17 +12,17 @@ height = 42.0
 
 [node name="knight" type="CharacterBody2D" parent="."]
 script = ExtResource("1_2wwun")
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="knight"]
 zoom = Vector2(2, 2)
 
 [node name="animatedsprite" type="AnimatedSprite2D" parent="knight"]
-position = Vector2(5, -24)
+position = Vector2(5, -20)
 sprite_frames = ExtResource("2_2wwun")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="knight"]
-visible = false
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_2wwun")
 

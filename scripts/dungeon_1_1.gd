@@ -18,3 +18,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_spikes_body_entered(body: Node2D) -> void:
 	body.queue_free()
+	get_tree().reload_current_scene()

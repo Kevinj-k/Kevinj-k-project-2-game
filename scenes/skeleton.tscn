@@ -1,20 +1,58 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0ebhgjiflrr3"]
+[gd_scene load_steps=7 format=3 uid="uid://c0ebhgjiflrr3"]
 
+[ext_resource type="Script" uid="uid://drslffwkpdjmt" path="res://Kevinj-k-project-2-game/scripts/skeleton.gd" id="1_2yvo0"]
 [ext_resource type="SpriteFrames" uid="uid://skyssc2i5v8b" path="res://Kevinj-k-project-2-game/elements/skeleton.tres" id="1_7tf4s"]
+[ext_resource type="Script" uid="uid://bhm33jfkwm0l6" path="res://Kevinj-k-project-2-game/scripts/animatorskeleton.gd" id="3_n3ns7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2yvo0"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3ns7"]
+size = Vector2(18, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2r8o"]
+size = Vector2(5, 20)
+
 [node name="Skeleton" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_2yvo0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = ExtResource("1_7tf4s")
-animation = &"walk"
-frame_progress = 0.958751
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(-3, 3)
 shape = SubResource("CapsuleShape2D_2yvo0")
 
-[node name="Node2D" type="Node2D" parent="CharacterBody2D"]
+[node name="animatorskeleton" type="Node2D" parent="CharacterBody2D" node_paths=PackedStringArray("animated_sprite")]
+script = ExtResource("3_n3ns7")
+animated_sprite = NodePath("../AnimatedSprite2D")
+
+[node name="head" type="Area2D" parent="CharacterBody2D"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/head"]
+position = Vector2(-3, -23)
+shape = SubResource("RectangleShape2D_n3ns7")
+
+[node name="damage" type="Area2D" parent="CharacterBody2D" groups=["player"]]
+position = Vector2(10, 3)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/damage"]
+shape = SubResource("RectangleShape2D_b2r8o")
+
+[node name="damage" type="Area2D" parent="." groups=["player"]]
+position = Vector2(-24, 3)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damage"]
+position = Vector2(7.5, 0)
+shape = SubResource("RectangleShape2D_b2r8o")
+
+[connection signal="body_entered" from="CharacterBody2D/head" to="CharacterBody2D" method="_on_head_body_entered"]
+[connection signal="body_entered" from="CharacterBody2D/damage" to="CharacterBody2D" method="_on_damage_body_entered"]
+[connection signal="body_entered" from="damage" to="CharacterBody2D" method="_on_damage_body_entered"]

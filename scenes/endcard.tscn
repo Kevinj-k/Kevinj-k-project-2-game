@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dnwm0fe6v1fon"]
+
+[node name="Endcard" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -478.0
+offset_top = -42.0
+offset_right = 1507.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 30
+text = "You save your roommate 
+and manage to escape the wrath of any higher being, 
+but when you bring him back he seems awfully different...
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 288.0
+offset_top = 288.0
+offset_right = 746.0
+offset_bottom = 518.0
+theme_override_font_sizes/font_size = 50
+text = "TO BE CONTINUNED?"
+horizontal_alignment = 1
+vertical_alignment = 1
