@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://wnb84f1hgkcy"]
+[gd_scene load_steps=4 format=3 uid="uid://wnb84f1hgkcy"]
 
 [ext_resource type="Script" uid="uid://buxf83bx7bbk7" path="res://Kevinj-k-project-2-game/scripts/main_menu.gd" id="1_8e5ws"]
 [ext_resource type="TileSet" uid="uid://c2wh265ebh2kq" path="res://Kevinj-k-project-2-game/elements/new_tile_set.tres" id="1_wukh0"]
+[ext_resource type="AudioStream" uid="uid://dyo60d3xmg2pi" path="res://Kevinj-k-project-2-game/sfx/start.wav" id="3_8dmjw"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_8e5ws")
@@ -28,5 +29,8 @@ offset_right = 704.0
 offset_bottom = 493.0
 theme_override_font_sizes/font_size = 50
 text = "Start"
+
+[node name="start_noise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8dmjw")
 
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]

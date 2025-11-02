@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0ebhgjiflrr3"]
+[gd_scene load_steps=8 format=3 uid="uid://c0ebhgjiflrr3"]
 
 [ext_resource type="Script" uid="uid://drslffwkpdjmt" path="res://Kevinj-k-project-2-game/scripts/skeleton.gd" id="1_2yvo0"]
 [ext_resource type="SpriteFrames" uid="uid://skyssc2i5v8b" path="res://Kevinj-k-project-2-game/elements/skeleton.tres" id="1_7tf4s"]
 [ext_resource type="Script" uid="uid://bhm33jfkwm0l6" path="res://Kevinj-k-project-2-game/scripts/animatorskeleton.gd" id="3_n3ns7"]
+[ext_resource type="AudioStream" uid="uid://u4r1lf3uw1xe" path="res://Kevinj-k-project-2-game/sfx/mutantdie.wav" id="4_b2r8o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2yvo0"]
 
@@ -44,6 +45,9 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/damage"]
 shape = SubResource("RectangleShape2D_b2r8o")
+
+[node name="bones" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
+stream = ExtResource("4_b2r8o")
 
 [node name="damage" type="Area2D" parent="." groups=["player"]]
 position = Vector2(-24, 3)

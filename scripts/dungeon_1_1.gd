@@ -12,10 +12,12 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	#loads new level
 	body.queue_free()
 	get_tree().change_scene_to_file("res://Kevinj-k-project-2-game/scenes/Dungeon 1-2.tscn")
 
 
 func _on_spikes_body_entered(body: Node2D) -> void:
+	#spikes kills character resets level
 	body.queue_free()
 	get_tree().reload_current_scene()

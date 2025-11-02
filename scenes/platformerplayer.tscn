@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgyje1ox72xs5"]
+[gd_scene load_steps=7 format=3 uid="uid://dgyje1ox72xs5"]
 
 [ext_resource type="Script" uid="uid://83b573rnqtcv" path="res://Kevinj-k-project-2-game/scripts/dungeonPlayer.gd" id="1_2wwun"]
 [ext_resource type="SpriteFrames" uid="uid://bnemdik67t6vt" path="res://Kevinj-k-project-2-game/elements/knight.tres" id="2_2wwun"]
 [ext_resource type="Script" uid="uid://bdhuifybnwv3v" path="res://Kevinj-k-project-2-game/scripts/animator.gd" id="3_fqnr0"]
+[ext_resource type="AudioStream" uid="uid://bgea87pcimb42" path="res://Kevinj-k-project-2-game/sfx/SFX_Jump_13.wav" id="4_mtor2"]
+[ext_resource type="AudioStream" uid="uid://rcpo6tigmx3s" path="res://Kevinj-k-project-2-game/sfx/step_metal.ogg" id="5_jvtuu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2wwun"]
 radius = 11.0
@@ -29,3 +31,9 @@ shape = SubResource("CapsuleShape2D_2wwun")
 [node name="animator" type="Node2D" parent="knight" node_paths=PackedStringArray("animated_sprite")]
 script = ExtResource("3_fqnr0")
 animated_sprite = NodePath("../animatedsprite")
+
+[node name="jump" type="AudioStreamPlayer2D" parent="knight"]
+stream = ExtResource("4_mtor2")
+
+[node name="walk" type="AudioStreamPlayer2D" parent="knight"]
+stream = ExtResource("5_jvtuu")

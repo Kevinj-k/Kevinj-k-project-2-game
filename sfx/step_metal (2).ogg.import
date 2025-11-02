@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://buce1he2s02vf"
+path="res://.godot/imported/step_metal (2).ogg-68da48c245703aae8aedd8a27143c5af.oggvorbisstr"
+
+[deps]
+
+source_file="res://Kevinj-k-project-2-game/sfx/step_metal (2).ogg"
+dest_files=["res://.godot/imported/step_metal (2).ogg-68da48c245703aae8aedd8a27143c5af.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

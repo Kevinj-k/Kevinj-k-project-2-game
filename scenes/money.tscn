@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c281ph0u23f8c"]
+[gd_scene load_steps=5 format=3 uid="uid://c281ph0u23f8c"]
 
 [ext_resource type="Script" uid="uid://dgwpwj7u0xfge" path="res://Kevinj-k-project-2-game/scripts/money.gd" id="1_1f278"]
 [ext_resource type="Texture2D" uid="uid://ckahkwtwwbcan" path="res://Kevinj-k-project-2-game/elements/money-removebg-preview.png" id="2_fkgy4"]
+[ext_resource type="AudioStream" uid="uid://bcl8kboc6d2o7" path="res://Kevinj-k-project-2-game/sfx/pickupCoin.wav" id="3_fkgy4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q4jhd"]
 
@@ -15,5 +16,8 @@ texture = ExtResource("2_fkgy4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_q4jhd")
+
+[node name="collect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fkgy4")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

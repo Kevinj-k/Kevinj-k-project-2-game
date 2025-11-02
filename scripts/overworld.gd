@@ -12,5 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_castle_body_entered(body: Node2D) -> void:
+	#loads level
 	body.queue_free()
 	get_tree().change_scene_to_file("res://Kevinj-k-project-2-game/scenes/dungeon 1-1.tscn")

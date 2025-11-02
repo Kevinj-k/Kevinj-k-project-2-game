@@ -6,14 +6,14 @@ var on_ground = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
+	#calls animations based on the action
 	if speed > .2 and on_ground:
 		animated_sprite.play("walk")
+		
 	else:
 		animated_sprite.play("idle")
 	
 	
 	if not on_ground:
 		animated_sprite.play("jump")
-		
 	pass

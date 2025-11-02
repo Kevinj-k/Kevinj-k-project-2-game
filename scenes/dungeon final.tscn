@@ -33,7 +33,6 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Animatedsprite2d/Area2D"]
 position = Vector2(-1.51764, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1cm5x")
 
 [connection signal="body_entered" from="Animatedsprite2d/Area2D" to="." method="_on_area_2d_body_entered"]
